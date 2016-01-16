@@ -14,7 +14,7 @@ var play = function(url,type, volume){
 		$("#m_player source").remove();
 		$("#m_player").append(str);
 		$("#m_player").trigger('load'); //Sinon il garde l'ancien
-		$("#m_player")..prop("volume", volume); //Permet une gestion par musique du son.
+		$("#m_player").prop("volume", volume); //Permet une gestion par musique du son.
 		$("#m_player").trigger('play');
 		
 };
@@ -27,7 +27,7 @@ var parse = function(datas) {
 
 var normal = function(){
 	
-	if(list_normal.length < 1) return; // Sécurité si pas de musique
+	if(list_normal.length < 1) return; // SÃ©curitÃ© si pas de musique
 	
 	$("#m_player").unbind("ended");
 	var number = Math.floor(Math.random()*list_normal.length);
@@ -66,7 +66,7 @@ return {
 				parse(data);				
 			})
 			.error(function(data,status,error,config){		
-				alert("impossible de charger la musique, erreur critique"); // Généralement synonyme de json mal formaté.
+				alert("impossible de charger la musique, erreur critique"); // GÃ©nÃ©ralement synonyme de json mal formatÃ©.
 			});
 		},
 		pause:function(){
